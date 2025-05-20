@@ -6,8 +6,37 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6CECF98E2DD9819D007C0230 /* SMSFilterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6CECF9872DD9819D007C0230 /* SMSFilterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6CECF98C2DD9819D007C0230 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CECF9632DD98021007C0230 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CECF9862DD9819D007C0230;
+			remoteInfo = SMSFilterExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6CECF9932DD9819D007C0230 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6CECF98E2DD9819D007C0230 /* SMSFilterExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6CECF96B2DD98021007C0230 /* SMSFilterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMSFilterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CECF9872DD9819D007C0230 /* SMSFilterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SMSFilterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -17,6 +46,13 @@
 				Info.plist,
 			);
 			target = 6CECF96A2DD98021007C0230 /* SMSFilterApp */;
+		};
+		6CECF9922DD9819D007C0230 /* Exceptions for "SMSFilterExtension" folder in "SMSFilterExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 6CECF9862DD9819D007C0230 /* SMSFilterExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -29,10 +65,25 @@
 			path = SMSFilterApp;
 			sourceTree = "<group>";
 		};
+		6CECF9882DD9819D007C0230 /* SMSFilterExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6CECF9922DD9819D007C0230 /* Exceptions for "SMSFilterExtension" folder in "SMSFilterExtension" target */,
+			);
+			path = SMSFilterExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6CECF9682DD98021007C0230 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CECF9842DD9819D007C0230 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				6CECF96D2DD98021007C0230 /* SMSFilterApp */,
+				6CECF9882DD9819D007C0230 /* SMSFilterExtension */,
 				6CECF96C2DD98021007C0230 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				6CECF96B2DD98021007C0230 /* SMSFilterApp.app */,
+				6CECF9872DD9819D007C0230 /* SMSFilterExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,10 +121,12 @@
 				6CECF9672DD98021007C0230 /* Sources */,
 				6CECF9682DD98021007C0230 /* Frameworks */,
 				6CECF9692DD98021007C0230 /* Resources */,
+				6CECF9932DD9819D007C0230 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6CECF98D2DD9819D007C0230 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				6CECF96D2DD98021007C0230 /* SMSFilterApp */,
@@ -82,6 +137,28 @@
 			productName = SMSFilterApp;
 			productReference = 6CECF96B2DD98021007C0230 /* SMSFilterApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6CECF9862DD9819D007C0230 /* SMSFilterExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CECF98F2DD9819D007C0230 /* Build configuration list for PBXNativeTarget "SMSFilterExtension" */;
+			buildPhases = (
+				6CECF9832DD9819D007C0230 /* Sources */,
+				6CECF9842DD9819D007C0230 /* Frameworks */,
+				6CECF9852DD9819D007C0230 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6CECF9882DD9819D007C0230 /* SMSFilterExtension */,
+			);
+			name = SMSFilterExtension;
+			packageProductDependencies = (
+			);
+			productName = SMSFilterExtension;
+			productReference = 6CECF9872DD9819D007C0230 /* SMSFilterExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -94,6 +171,9 @@
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					6CECF96A2DD98021007C0230 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					6CECF9862DD9819D007C0230 = {
 						CreatedOnToolsVersion = 16.3;
 					};
 				};
@@ -113,12 +193,20 @@
 			projectRoot = "";
 			targets = (
 				6CECF96A2DD98021007C0230 /* SMSFilterApp */,
+				6CECF9862DD9819D007C0230 /* SMSFilterExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6CECF9692DD98021007C0230 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CECF9852DD9819D007C0230 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,7 +223,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6CECF9832DD9819D007C0230 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6CECF98D2DD9819D007C0230 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CECF9862DD9819D007C0230 /* SMSFilterExtension */;
+			targetProxy = 6CECF98C2DD9819D007C0230 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6CECF97F2DD98023007C0230 /* Debug */ = {
@@ -143,6 +246,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SMSFilterApp/SMSFilterApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZPT3K98NMV;
@@ -171,6 +275,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SMSFilterApp/SMSFilterApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZPT3K98NMV;
@@ -315,6 +420,58 @@
 			};
 			name = Release;
 		};
+		6CECF9902DD9819D007C0230 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SMSFilterExtension/SMSFilterExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZPT3K98NMV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SMSFilterExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SMSFilterExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlperrD.SMSFilterApp.SMSFilterExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6CECF9912DD9819D007C0230 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SMSFilterExtension/SMSFilterExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZPT3K98NMV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SMSFilterExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SMSFilterExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlperrD.SMSFilterApp.SMSFilterExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -332,6 +489,15 @@
 			buildConfigurations = (
 				6CECF97F2DD98023007C0230 /* Debug */,
 				6CECF9802DD98023007C0230 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CECF98F2DD9819D007C0230 /* Build configuration list for PBXNativeTarget "SMSFilterExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CECF9902DD9819D007C0230 /* Debug */,
+				6CECF9912DD9819D007C0230 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
