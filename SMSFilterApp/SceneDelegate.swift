@@ -1,9 +1,3 @@
-//
-//  SceneDelegate.swift
-//  SMSFilterApp
-//
-//  Created by Alper Duman on 18.05.2025.
-//
 
 import UIKit
 

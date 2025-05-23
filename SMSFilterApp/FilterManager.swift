@@ -2,11 +2,13 @@ import Foundation
 
 class FilterManager {
     static let shared = FilterManager()
-    let defaults = UserDefaults(suiteName: "group.com.AlperrD.smsfilter") // App group ID
+    let defaults = UserDefaults(suiteName: "group.com.AlperrD.smsfilter") // Uygulama grup ID'si
 
     private let userKey = "UserKeywords"
     private let defaultKey = "DefaultKeywords"
-    
+    private let useAIKey = "UseAI"
+    private let useKeywordFilterKey = "UseKeywordFilter"
+
     init() {
         // İlk çalıştırmada varsayılan filtreleri kaydet
         if defaults?.array(forKey: defaultKey) == nil {
@@ -14,22 +16,24 @@ class FilterManager {
             defaults?.synchronize()
             print("Varsayılan filtreler ilk kez kaydedildi")
         }
+        
+        // Kullanıcı tercihlerinin varsayılan olarak ayarlanması
+        if defaults?.object(forKey: useAIKey) == nil {
+            defaults?.set(true, forKey: useAIKey)
+            print("Varsayılan olarak AI kullanımı açık")
+        }
+        
+        if defaults?.object(forKey: useKeywordFilterKey) == nil {
+            defaults?.set(true, forKey: useKeywordFilterKey)
+            print("Varsayılan olarak kelime filtresi kullanımı açık")
+        }
+
+        defaults?.synchronize()
     }
     
     let builtInDefaults = [
         "kumar", "bahis", "casino", "şans oyunu", "dede", "jackpot", "bet", "spin", "çevrim", "çevrimsiz",
         "çekim limiti", "freebet", "canlı bahis", "slot", "piyango", "ödül", "promosyon", "hediye", "bonus",
-        "kazan", "para", "ödeme", "yeni üye", "kazanç", "jackpot", "turnuva", "kayıt ol", "ücretsiz deneme",
-        "mobil bahis", "kredi", "bahis sitesi", "para yatır", "para çek", "maksimum bahis", "bahis kuponu",
-        "kazanç fırsatı", "maç sonucu", "tahmin", "oran", "bahis oranı", "kazanç garantisi", "oyun", "mobil casino",
-        "slot oyunları", "ücretsiz bahis", "hesap aç", "giriş yap", "yükle", "slot makinesi", "sanal bahis", "bitcoin bahis",
-        "canlı casino", "rulet", "blackjack", "poker", "jackpot kazan", "bahis yap", "bahis oynayın", "para kazan",
-        "haftalık bonus", "vip bahis", "spor bahisleri", "kazandıran sistem", "turnuva", "ödül kazan", "canlı destek",
-        "bonus kodu", "bedava spin", "şans", "kazançlı", "vip üyelik", "giriş bonusu", "ödül programı", "şifre değiştir",
-        "limit aşımı", "kayıt bonusu", "çevrimsiz bonus", "para yatırma", "minimum bahis", "maksimum kazanç",
-        "ödül kuponu", "ödül spin", "bonus fırsatı", "sanal para", "güvenilir bahis", "para yatırma bonusu",
-        "kayıp bonusu", "ilk para yatırma", "promosyon kodu", "güvenilir site", "garantili bahis", "güvenilir casino",
-        "ödül kazanma", "vip destek"
     ]
 
     func loadUserFilters() -> [String] {
@@ -54,5 +58,27 @@ class FilterManager {
         defaults?.set(filters, forKey: defaultKey)
         defaults?.synchronize()
         print("Varsayılan filtreler kaydedildi: \(filters.count)")
+    }
+
+    // Kullanıcı tercihlerini ayarla
+    func setUseAI(_ useAI: Bool) {
+        defaults?.set(useAI, forKey: useAIKey)
+        defaults?.synchronize()
+        print("Yapay Zeka kullanımı ayarlandı: \(useAI)")
+    }
+
+    func setUseKeywordFilter(_ useKeywordFilter: Bool) {
+        defaults?.set(useKeywordFilter, forKey: useKeywordFilterKey)
+        defaults?.synchronize()
+        print("Kelime filtresi kullanımı ayarlandı: \(useKeywordFilter)")
+    }
+
+    // Kullanıcı tercihlerini yükle
+    func shouldUseAI() -> Bool {
+        return defaults?.bool(forKey: useAIKey) ?? false
+    }
+
+    func shouldUseKeywordFilter() -> Bool {
+        return defaults?.bool(forKey: useKeywordFilterKey) ?? false
     }
 }

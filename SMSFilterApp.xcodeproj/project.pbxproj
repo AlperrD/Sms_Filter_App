@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C95433D2DDFC47600AC8645 /* sms_filter_lstm_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6C95433C2DDFC47600AC8645 /* sms_filter_lstm_model.mlmodel */; };
+		6C95433F2DDFC7BB00AC8645 /* sms_filter_lstm_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 6C95433C2DDFC47600AC8645 /* sms_filter_lstm_model.mlmodel */; };
 		6CECF98E2DD9819D007C0230 /* SMSFilterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6CECF9872DD9819D007C0230 /* SMSFilterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6C95433C2DDFC47600AC8645 /* sms_filter_lstm_model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = sms_filter_lstm_model.mlmodel; sourceTree = "<group>"; };
 		6CECF96B2DD98021007C0230 /* SMSFilterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMSFilterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CECF9872DD9819D007C0230 /* SMSFilterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SMSFilterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,6 +102,7 @@
 				6CECF96D2DD98021007C0230 /* SMSFilterApp */,
 				6CECF9882DD9819D007C0230 /* SMSFilterExtension */,
 				6CECF96C2DD98021007C0230 /* Products */,
+				6C95433C2DDFC47600AC8645 /* sms_filter_lstm_model.mlmodel */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +126,7 @@
 				6CECF9682DD98021007C0230 /* Frameworks */,
 				6CECF9692DD98021007C0230 /* Resources */,
 				6CECF9932DD9819D007C0230 /* Embed Foundation Extensions */,
+				6C95433E2DDFC4F400AC8645 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -215,11 +220,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6C95433E2DDFC4F400AC8645 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Model dosyasının derlenen konumu\nMODEL_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/sms_filter_lstm_model.mlmodelc\"\n\n# Extension'ın bundle konumu\nEXTENSION_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/PlugIns/SMSFilterExtension.appex\"\n\n# Model dosyasını extension'a kopyala\nif [ -d \"$MODEL_PATH\" ]; then\n    cp -r \"$MODEL_PATH\" \"$EXTENSION_PATH\"\n    echo \"Model copied to extension successfully\"\nelse\n    echo \"Error: Model not found at $MODEL_PATH\"\n    exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6CECF9672DD98021007C0230 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C95433D2DDFC47600AC8645 /* sms_filter_lstm_model.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C95433F2DDFC7BB00AC8645 /* sms_filter_lstm_model.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
