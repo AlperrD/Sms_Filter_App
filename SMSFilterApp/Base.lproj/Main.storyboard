@@ -11,27 +11,13 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SMSFilterApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="currentContext" id="BYZ-38-t0r" customClass="ViewController" customModule="SMSFilterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ajq-jA-sT8">
-                                <rect key="frame" x="16" y="182" width="361" height="483"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FilterCell" id="cKS-C9-GDr">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cKS-C9-GDr" id="8ar-fp-10D">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0iG-hl-uhH">
-                                <rect key="frame" x="212" y="118" width="165" height="32"/>
+                                <rect key="frame" x="212" y="336" width="165" height="32"/>
                                 <segments>
                                     <segment title="Varsayılan"/>
                                     <segment title="Kullanıcı"/>
@@ -41,65 +27,99 @@
                                 </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yeni Filtre Ekle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amy-bA-MvO">
-                                <rect key="frame" x="16" y="673" width="361" height="34"/>
+                                <rect key="frame" x="16" y="375" width="361" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4C-kq-bMK">
-                                <rect key="frame" x="279" y="715" width="98" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Filtre Ekle"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4C-kq-bMK">
+                                <rect key="frame" x="281" y="417" width="96" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Filtre Ekle"/>
                                 <connections>
                                     <action selector="addFilterTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kjg-LO-7NM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yz kullan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpn-dP-7nv">
-                                <rect key="frame" x="31" y="722" width="68" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ajq-jA-sT8">
+                                <rect key="frame" x="0.0" y="468" width="393" height="316"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FilterCell" id="cKS-C9-GDr">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cKS-C9-GDr" id="8ar-fp-10D">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtrelenen Kelimeler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6x-xC-XN7">
+                                <rect key="frame" x="16" y="292" width="176" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="filtre " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84L-ZP-47e">
-                                <rect key="frame" x="162" y="722" width="39" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yapay Zeka Kullan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpn-dP-7nv">
+                                <rect key="frame" x="25" y="193" width="146" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kelime Filtresi Kullan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84L-ZP-47e">
+                                <rect key="frame" x="25" y="233" width="155.33333333333334" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGk-wE-d50">
-                                <rect key="frame" x="209" y="715" width="51" height="31"/>
+                                <rect key="frame" x="328" y="228" width="51" height="31"/>
                                 <connections>
                                     <action selector="keywordSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="uxo-Jq-LwJ"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanılan Filtreler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8I-o2-O6G">
+                                <rect key="frame" x="16" y="148" width="155" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2a0-gW-G8J">
-                                <rect key="frame" x="107" y="717" width="51" height="31"/>
+                                <rect key="frame" x="328" y="189" width="51" height="31"/>
                                 <connections>
                                     <action selector="aiSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="8T9-4N-DWp"/>
                                 </connections>
                             </switch>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY" colorLabel="IBBuiltInLabel-Blue"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rpn-dP-7nv" firstAttribute="baseline" secondItem="84L-ZP-47e" secondAttribute="baseline" id="28Y-qU-VnF"/>
-                            <constraint firstItem="84L-ZP-47e" firstAttribute="centerY" secondItem="p4C-kq-bMK" secondAttribute="centerY" id="6YF-hx-bRV"/>
-                            <constraint firstItem="0iG-hl-uhH" firstAttribute="trailing" secondItem="Ajq-jA-sT8" secondAttribute="trailing" id="EB2-QZ-vWN"/>
-                            <constraint firstItem="Ajq-jA-sT8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Fjm-CC-sWz"/>
-                            <constraint firstItem="YGk-wE-d50" firstAttribute="top" secondItem="p4C-kq-bMK" secondAttribute="top" id="IWj-xm-PAb"/>
-                            <constraint firstItem="Ajq-jA-sT8" firstAttribute="trailing" secondItem="amy-bA-MvO" secondAttribute="trailing" id="IoS-Sn-EEf"/>
-                            <constraint firstItem="YGk-wE-d50" firstAttribute="leading" secondItem="84L-ZP-47e" secondAttribute="trailing" constant="8" symbolic="YES" id="MfX-Ai-6x3"/>
-                            <constraint firstItem="2a0-gW-G8J" firstAttribute="leading" secondItem="rpn-dP-7nv" secondAttribute="trailing" constant="8" symbolic="YES" id="Tff-4J-kVN"/>
-                            <constraint firstItem="rpn-dP-7nv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="ZpK-aQ-dXU"/>
-                            <constraint firstItem="0iG-hl-uhH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cTx-BY-H4R"/>
-                            <constraint firstItem="amy-bA-MvO" firstAttribute="trailing" secondItem="p4C-kq-bMK" secondAttribute="trailing" id="euY-Ms-qry"/>
-                            <constraint firstItem="Ajq-jA-sT8" firstAttribute="leading" secondItem="amy-bA-MvO" secondAttribute="leading" id="f9U-Lj-Uqd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="p4C-kq-bMK" secondAttribute="bottom" constant="34" id="hL5-Q3-x30"/>
-                            <constraint firstItem="YGk-wE-d50" firstAttribute="top" secondItem="amy-bA-MvO" secondAttribute="bottom" constant="8" symbolic="YES" id="hdH-zr-j9i"/>
-                            <constraint firstItem="amy-bA-MvO" firstAttribute="top" secondItem="Ajq-jA-sT8" secondAttribute="bottom" constant="8" symbolic="YES" id="ijf-YL-8bm"/>
-                            <constraint firstItem="84L-ZP-47e" firstAttribute="leading" secondItem="2a0-gW-G8J" secondAttribute="trailing" constant="6" id="k82-X7-asQ"/>
-                            <constraint firstItem="2a0-gW-G8J" firstAttribute="centerY" secondItem="84L-ZP-47e" secondAttribute="centerY" id="otO-US-uIz"/>
-                            <constraint firstItem="0iG-hl-uhH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wSg-xj-nF4"/>
-                            <constraint firstItem="Ajq-jA-sT8" firstAttribute="top" secondItem="0iG-hl-uhH" secondAttribute="bottom" constant="33" id="yGn-ls-Gop"/>
+                            <constraint firstItem="p4C-kq-bMK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="281" id="0Kb-ON-onG"/>
+                            <constraint firstItem="YGk-wE-d50" firstAttribute="trailing" secondItem="0iG-hl-uhH" secondAttribute="trailing" id="1Tq-zA-pIB"/>
+                            <constraint firstItem="rpn-dP-7nv" firstAttribute="leading" secondItem="84L-ZP-47e" secondAttribute="leading" id="1iw-eD-CIo"/>
+                            <constraint firstItem="YGk-wE-d50" firstAttribute="top" secondItem="2a0-gW-G8J" secondAttribute="bottom" constant="8" symbolic="YES" id="52I-VF-Vqb"/>
+                            <constraint firstItem="v6x-xC-XN7" firstAttribute="top" secondItem="84L-ZP-47e" secondAttribute="bottom" constant="38" id="6PL-LA-7M7"/>
+                            <constraint firstItem="v6x-xC-XN7" firstAttribute="leading" secondItem="amy-bA-MvO" secondAttribute="leading" id="9K3-0B-s6X"/>
+                            <constraint firstItem="Ajq-jA-sT8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ABV-fd-qGL"/>
+                            <constraint firstItem="p4C-kq-bMK" firstAttribute="top" secondItem="amy-bA-MvO" secondAttribute="bottom" constant="8" symbolic="YES" id="CTb-gb-AsS"/>
+                            <constraint firstItem="r8I-o2-O6G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DaZ-cE-gpm"/>
+                            <constraint firstItem="amy-bA-MvO" firstAttribute="top" secondItem="0iG-hl-uhH" secondAttribute="bottom" constant="8" symbolic="YES" id="F67-Uq-Fjv"/>
+                            <constraint firstItem="amy-bA-MvO" firstAttribute="trailing" secondItem="p4C-kq-bMK" secondAttribute="trailing" id="K1b-eO-qtR"/>
+                            <constraint firstItem="84L-ZP-47e" firstAttribute="centerY" secondItem="YGk-wE-d50" secondAttribute="centerY" id="NV3-8d-Qg3"/>
+                            <constraint firstItem="0iG-hl-uhH" firstAttribute="trailing" secondItem="amy-bA-MvO" secondAttribute="trailing" id="RyG-xK-NVG"/>
+                            <constraint firstItem="Ajq-jA-sT8" firstAttribute="top" secondItem="p4C-kq-bMK" secondAttribute="bottom" constant="19" id="WbQ-Ua-XWt"/>
+                            <constraint firstItem="2a0-gW-G8J" firstAttribute="leading" secondItem="YGk-wE-d50" secondAttribute="leading" id="ZrM-9m-rHw"/>
+                            <constraint firstItem="r8I-o2-O6G" firstAttribute="trailing" secondItem="rpn-dP-7nv" secondAttribute="trailing" id="cJP-pg-lfC"/>
+                            <constraint firstItem="amy-bA-MvO" firstAttribute="centerX" secondItem="Ajq-jA-sT8" secondAttribute="centerX" id="cT5-Pr-eVz"/>
+                            <constraint firstAttribute="trailing" secondItem="Ajq-jA-sT8" secondAttribute="trailing" id="dVU-HX-J0H"/>
+                            <constraint firstItem="r8I-o2-O6G" firstAttribute="leading" secondItem="v6x-xC-XN7" secondAttribute="leading" id="hGE-xm-bIq"/>
+                            <constraint firstItem="amy-bA-MvO" firstAttribute="top" secondItem="v6x-xC-XN7" secondAttribute="bottom" constant="61" id="kHm-ag-A3r"/>
+                            <constraint firstItem="84L-ZP-47e" firstAttribute="top" secondItem="rpn-dP-7nv" secondAttribute="bottom" constant="17" id="nU2-WM-NFE"/>
+                            <constraint firstItem="Ajq-jA-sT8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nXX-Wr-Ccz"/>
+                            <constraint firstItem="rpn-dP-7nv" firstAttribute="centerY" secondItem="2a0-gW-G8J" secondAttribute="centerY" id="p5t-wy-uKx"/>
+                            <constraint firstItem="2a0-gW-G8J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="71" id="wTg-FU-gRa"/>
+                            <constraint firstItem="r8I-o2-O6G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="wew-uP-j26"/>
+                            <constraint firstItem="rpn-dP-7nv" firstAttribute="top" secondItem="r8I-o2-O6G" secondAttribute="bottom" constant="23" id="x8V-Zd-odg"/>
                         </constraints>
                     </view>
                     <connections>
