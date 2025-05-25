@@ -43,13 +43,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		6C95434B2DE0C6D700AC8645 /* Exceptions for "SMSFilterApp" folder in "SMSFilterExtension" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Assets.xcassets,
-			);
-			target = 6CECF9862DD9819D007C0230 /* SMSFilterExtension */;
-		};
 		6CECF97D2DD98023007C0230 /* Exceptions for "SMSFilterApp" folder in "SMSFilterApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -67,11 +60,15 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		6C9543AD2DE3616000AC8645 /* assetts-github */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "assetts-github";
+			sourceTree = "<group>";
+		};
 		6CECF96D2DD98021007C0230 /* SMSFilterApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				6CECF97D2DD98023007C0230 /* Exceptions for "SMSFilterApp" folder in "SMSFilterApp" target */,
-				6C95434B2DE0C6D700AC8645 /* Exceptions for "SMSFilterApp" folder in "SMSFilterExtension" target */,
 			);
 			path = SMSFilterApp;
 			sourceTree = "<group>";
@@ -107,6 +104,7 @@
 		6CECF9622DD98021007C0230 = {
 			isa = PBXGroup;
 			children = (
+				6C9543AD2DE3616000AC8645 /* assetts-github */,
 				6CECF96D2DD98021007C0230 /* SMSFilterApp */,
 				6CECF9882DD9819D007C0230 /* SMSFilterExtension */,
 				6CECF96C2DD98021007C0230 /* Products */,
