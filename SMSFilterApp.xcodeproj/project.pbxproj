@@ -43,6 +43,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6C95434B2DE0C6D700AC8645 /* Exceptions for "SMSFilterApp" folder in "SMSFilterExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+			);
+			target = 6CECF9862DD9819D007C0230 /* SMSFilterExtension */;
+		};
 		6CECF97D2DD98023007C0230 /* Exceptions for "SMSFilterApp" folder in "SMSFilterApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -64,6 +71,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				6CECF97D2DD98023007C0230 /* Exceptions for "SMSFilterApp" folder in "SMSFilterApp" target */,
+				6C95434B2DE0C6D700AC8645 /* Exceptions for "SMSFilterApp" folder in "SMSFilterExtension" target */,
 			);
 			path = SMSFilterApp;
 			sourceTree = "<group>";
@@ -273,6 +281,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = SMSFilterApp/SMSFilterApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -302,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = SMSFilterApp/SMSFilterApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -450,6 +460,8 @@
 		6CECF9902DD9819D007C0230 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=*]" = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = SMSFilterExtension/SMSFilterExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -476,6 +488,8 @@
 		6CECF9912DD9819D007C0230 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=*]" = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = SMSFilterExtension/SMSFilterExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
